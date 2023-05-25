@@ -6,7 +6,6 @@ import { MediumMobile } from '../assets/responsive';
 export const Cart = () => {
   return (
     <Container>
-      {/* <Navbar /> */}
       <Announcement />
       <Wrapper>
          <Title>YOUR CART</Title>
@@ -82,7 +81,6 @@ export const Cart = () => {
             </Summary>
          </Bottom>
       </Wrapper>
-      {/* <Footer /> */}
     </Container>
   );
 }
@@ -132,7 +130,7 @@ const TopButton: StyledComponent<"button", any, NonNullable<unknown>, string>= s
    }
 
    &:hover{
-      background-color: ${props => props.color};
+      background-color: ${(props: {color?: string}) => props.color};
    }
 
    &:active{
@@ -217,7 +215,7 @@ const ProductColor = styled.span`
    width: 20px;
    height: 20px;
    border-radius: 50%;
-   background-color: ${props => props.color};
+   background-color: ${(props: {color?: string}) => props.color};
 `
 const ProductSize = styled.span`
 
